@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang= "en">
+  <head>
+    <meta charset="utf-8">
+    <title> Insert Title</title>
+    <meta name="description" content= "Insert description of webpage">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
+  </head>
+  <body>
+    <h2>Thank you for your business</h2>
+    <p>We charged your credit card for ${{request.session.order}}</p>
+    <p>You have ordered {{request.session.count}} items so far and spent ${{request.session.total}} with Amadon.com!</p>
+    <p><a href="/">Go back</a></p>
+  </body>
+</html>
